@@ -1,0 +1,102 @@
+body {
+  display: grid;
+  font-family: 'Sora';
+  background-color: #F3EEEA;
+}
+
+h1 {
+  color: #776B5D;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
+
+button {
+  color: rgb(244, 242, 240);
+  font-size: 15px;
+  width: 150px;
+  font-family: 'Sora';
+  cursor: pointer;
+  border-radius: 50px;
+  background-color: #776B5D;
+}
+
+#addButton{
+  margin-left: 50%;
+}
+
+.card {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin-top: 3%;
+  margin-right: 5%;
+  margin-left: 10%;
+  position: relative;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+}
+
+.card.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: visible;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  color: rgb(244, 242, 240);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50px;
+  background-position: 100% 0;
+  background-image: linear-gradient(to bottom, #C8B6A6, #A4907C, #776B5D);
+  box-shadow: 0 4px 15px 0 #776B5D;
+}
+
+.card .edit-button {
+  background-color: #296f2a;
+  color: white;
+  padding-left: 8px;
+  width: 15%;
+  height: 15%;
+  border: none;
+  cursor: pointer;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+.card .delete-button {
+  background-color: #862d27;
+  padding-left: 8px;
+  width: 15%;
+  height: 15%;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.card.flip .edit-button{display: none;}
+.card.flip .delete-button{display: none;}
+
